@@ -1,3 +1,5 @@
+using ProductivityApp.Core.Data;
+
 namespace ProductivityApp.WindowsForms
 {
     internal static class Program
@@ -11,6 +13,7 @@ namespace ProductivityApp.WindowsForms
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
+            DataDbContext context = new DataDbContextFactory().CreateDbContext(new string[]{ });
             Application.Run(new MainForm());
         }
     }
