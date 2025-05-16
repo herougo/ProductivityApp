@@ -35,6 +35,7 @@ namespace ProductivityApp.WindowsForms
             if (buttonClick != null)
             {
                 tbReadyMessage.Text = "Already clicked today!";
+                return;
             }
             
             DateTime now = DateTime.Now;
@@ -53,15 +54,15 @@ namespace ProductivityApp.WindowsForms
         {
             if (now < DateTime.Today.AddMinutes(60 * 10 + 15))
             {
-                pbReadyImage.Image = Image.FromFile(AppDomain.CurrentDomain.BaseDirectory + "thanos.png");
+                pbReadyImage.Image = Image.FromFile(AppDomain.CurrentDomain.BaseDirectory + "images\\thanos.png");
                 tbReadyMessage.Text = "Go get 'em, Thanos!";
             }
             else if (now < DateTime.Today.AddMinutes(60 * 11 + 15))
             {
-                pbReadyImage.Image = Image.FromFile(AppDomain.CurrentDomain.BaseDirectory + "thor.png");
+                pbReadyImage.Image = Image.FromFile(AppDomain.CurrentDomain.BaseDirectory + "images\\thor.png");
                 tbReadyMessage.Text = "Go get 'em, Thor!";
             }
-            pbReadyImage.Image = Image.FromFile(AppDomain.CurrentDomain.BaseDirectory + "iron_man.jpg");
+            pbReadyImage.Image = Image.FromFile(AppDomain.CurrentDomain.BaseDirectory + "images\\iron_man.jpg");
             tbReadyMessage.Text = "Go get 'em, Iron Man!";
         }
 

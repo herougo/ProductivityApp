@@ -49,6 +49,7 @@
             pbReadyImage.Location = new Point(323, 39);
             pbReadyImage.Name = "pbReadyImage";
             pbReadyImage.Size = new Size(504, 504);
+            pbReadyImage.SizeMode = PictureBoxSizeMode.StretchImage;
             pbReadyImage.TabIndex = 1;
             pbReadyImage.TabStop = false;
             // 
