@@ -3,6 +3,7 @@ using Microsoft.VisualBasic.Devices;
 using ProductivityApp.Core.Data;
 using ProductivityApp.Core.Data.Models;
 using System.ComponentModel;
+using System.Data.SqlTypes;
 
 namespace ProductivityApp.WindowsForms
 {
@@ -28,12 +29,40 @@ namespace ProductivityApp.WindowsForms
 
         private void btnReady_Click(object sender, EventArgs e)
         {
-            ButtonClicks click = new ButtonClicks()
+            var buttonClick = _dbContext?.ButtonClick.FirstOrDefaultAsync(
+                m => m.ClickedAt >= DateTime.Today && m.ClickType == ClickType.Ready
+            );
+            if (buttonClick != null)
             {
-                
+                tbReadyMessage.Text = "Already clicked today!";
+            }
+            
+            DateTime now = DateTime.Now;
+            ButtonClick click = new ButtonClick()
+            {
+                ClickType = ClickType.Ready,
+                ClickedAt = now,
             };
             _dbContext?.Add(click);
             _dbContext?.SaveChanges();
+
+            HandleReadyClick(now);
+        }
+
+        public void HandleReadyClick(DateTime now)
+        {
+            if (now < DateTime.Today.AddMinutes(60 * 10 + 15))
+            {
+                pbReadyImage.Image = Image.FromFile(AppDomain.CurrentDomain.BaseDirectory + "thanos.png");
+                tbReadyMessage.Text = "Go get 'em, Thanos!";
+            }
+            else if (now < DateTime.Today.AddMinutes(60 * 11 + 15))
+            {
+                pbReadyImage.Image = Image.FromFile(AppDomain.CurrentDomain.BaseDirectory + "thor.png");
+                tbReadyMessage.Text = "Go get 'em, Thor!";
+            }
+            pbReadyImage.Image = Image.FromFile(AppDomain.CurrentDomain.BaseDirectory + "iron_man.jpg");
+            tbReadyMessage.Text = "Go get 'em, Iron Man!";
         }
 
         protected override void OnClosing(CancelEventArgs e)
