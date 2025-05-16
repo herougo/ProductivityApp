@@ -28,12 +28,56 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            btnReady = new Button();
+            pbReadyImage = new PictureBox();
+            tbReadyMessage = new TextBox();
+            ((System.ComponentModel.ISupportInitialize)pbReadyImage).BeginInit();
+            SuspendLayout();
+            // 
+            // btnReady
+            // 
+            btnReady.Location = new Point(901, 261);
+            btnReady.Name = "btnReady";
+            btnReady.Size = new Size(227, 141);
+            btnReady.TabIndex = 0;
+            btnReady.Text = "I'm Ready!";
+            btnReady.UseVisualStyleBackColor = true;
+            btnReady.Click += btnReady_Click;
+            // 
+            // pbReadyImage
+            // 
+            pbReadyImage.Location = new Point(323, 39);
+            pbReadyImage.Name = "pbReadyImage";
+            pbReadyImage.Size = new Size(504, 504);
+            pbReadyImage.TabIndex = 1;
+            pbReadyImage.TabStop = false;
+            // 
+            // tbReadyMessage
+            // 
+            tbReadyMessage.Location = new Point(323, 561);
+            tbReadyMessage.Name = "tbReadyMessage";
+            tbReadyMessage.Size = new Size(504, 43);
+            tbReadyMessage.TabIndex = 2;
+            // 
+            // MainForm
+            // 
+            AutoScaleDimensions = new SizeF(15F, 37F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1255, 672);
+            Controls.Add(tbReadyMessage);
+            Controls.Add(pbReadyImage);
+            Controls.Add(btnReady);
+            Name = "MainForm";
+            Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)pbReadyImage).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Button btnReady;
+        private PictureBox pbReadyImage;
+        private TextBox tbReadyMessage;
     }
 }
