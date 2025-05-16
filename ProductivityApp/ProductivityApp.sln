@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35208.52
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductivityApp.Server", "ProductivityApp.Server\ProductivityApp.Server.csproj", "{E60EA194-8264-4821-BD1E-925FD244B41F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductivityApp.Server", "ProductivityApp.Server\ProductivityApp.Server.csproj", "{E60EA194-8264-4821-BD1E-925FD244B41F}"
 EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "productivityapp.client", "productivityapp.client\productivityapp.client.esproj", "{9B5C0192-8D7F-40B4-917C-14A84D4430EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductivityApp.WindowsForms", "ProductivityApp.WindowsForms\ProductivityApp.WindowsForms.csproj", "{2B3F2BF9-DA0F-4417-B1ED-25F2C4E37C4E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +25,10 @@ Global
 		{9B5C0192-8D7F-40B4-917C-14A84D4430EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B5C0192-8D7F-40B4-917C-14A84D4430EA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9B5C0192-8D7F-40B4-917C-14A84D4430EA}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{2B3F2BF9-DA0F-4417-B1ED-25F2C4E37C4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B3F2BF9-DA0F-4417-B1ED-25F2C4E37C4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B3F2BF9-DA0F-4417-B1ED-25F2C4E37C4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B3F2BF9-DA0F-4417-B1ED-25F2C4E37C4E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
