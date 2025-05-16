@@ -20,7 +20,6 @@
     <ProjectReference Include="..\productivityapp.client\productivityapp.client.esproj">
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
-    <ProjectReference Include="..\ProductivityApp.Core\ProductivityApp.Core.csproj" />
   </ItemGroup>
 
 </Project>

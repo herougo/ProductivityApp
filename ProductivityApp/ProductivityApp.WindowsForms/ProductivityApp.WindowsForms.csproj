@@ -79,11 +79,5 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ProductivityApp.Core\ProductivityApp.Core.csproj">
-      <Project>{d7aa87d2-4645-4dd2-a6bb-a2faf68df8e4}</Project>
-      <Name>ProductivityApp.Core</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
