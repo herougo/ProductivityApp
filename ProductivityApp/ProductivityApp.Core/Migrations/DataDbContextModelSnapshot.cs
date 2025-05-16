@@ -24,7 +24,7 @@ namespace ProductivityApp.Core.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Question");
+                    b.ToTable("ButtonClicks");
                 });
 #pragma warning restore 612, 618
         }

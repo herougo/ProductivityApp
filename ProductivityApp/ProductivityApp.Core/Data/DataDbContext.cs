@@ -9,6 +9,6 @@ namespace ProductivityApp.Core.Data
             : base(options)
         { }
 
-        public DbSet<ButtonClicks> Question { get; set; } = null!;
+        public DbSet<ButtonClicks> ButtonClicks { get; set; } = null!;
     }
 }

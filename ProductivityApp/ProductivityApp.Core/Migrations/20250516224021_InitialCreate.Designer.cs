@@ -10,7 +10,7 @@ using ProductivityApp.Core.Data;
 namespace ProductivityApp.Core.Migrations
 {
     [DbContext(typeof(DataDbContext))]
-    [Migration("20250516221912_InitialCreate")]
+    [Migration("20250516224021_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -27,7 +27,7 @@ namespace ProductivityApp.Core.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Question");
+                    b.ToTable("ButtonClicks");
                 });
 #pragma warning restore 612, 618
         }

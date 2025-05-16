@@ -11,7 +11,7 @@ namespace ProductivityApp.Core.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Question",
+                name: "ButtonClicks",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
@@ -19,7 +19,7 @@ namespace ProductivityApp.Core.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Question", x => x.Id);
+                    table.PrimaryKey("PK_ButtonClicks", x => x.Id);
                 });
         }
 
@@ -27,7 +27,7 @@ namespace ProductivityApp.Core.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Question");
+                name: "ButtonClicks");
         }
     }
 }
