@@ -7,8 +7,7 @@ namespace ProductivityApp.Core.Data
     {
         public DataDbContext CreateDbContext(string[] args)
         {
-            var folder = Environment.SpecialFolder.LocalApplicationData;
-            string path = Environment.GetFolderPath(folder);
+            string path = AppDomain.CurrentDomain.BaseDirectory;
             string dbPath = Path.Join(path, "productivity.db");
 
             var optionsBuilder = new DbContextOptionsBuilder<DataDbContext>();
